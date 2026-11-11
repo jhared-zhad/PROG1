@@ -1,0 +1,29 @@
+double a, b;
+char op;
+printf("Enter first number: ");
+scanf("%lf", &a);
+printf("Enter second number: ");
+scanf("%lf", &b);
+printf("Enter operator (+, -, *, /): ");
+scanf(" %c", &op);   // the space before %c skips leftover whitespace
+
+switch (op) {
+    case '+':
+        printf("Result: %g + %g = %g\n", a, b, a + b);
+        break;
+    case '-':
+        printf("Result: %g - %g = %g\n", a, b, a - b);
+        break;
+    case '*':
+        printf("Result: %g * %g = %g\n", a, b, a * b);
+        break;
+    case '/':
+        if (b == 0) {
+            printf("Error: Division by zero is not allowed.\n");
+        } else {
+            printf("Result: %g / %g = %g\n", a, b, a / b);
+        }
+        break;
+    default:
+        printf("Error: Invalid operator.\n");
+}
