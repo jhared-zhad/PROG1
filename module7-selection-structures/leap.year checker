@@ -6,3 +6,22 @@ if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
 } else {
     printf("%d is NOT a leap year.\n", year);
 }
+
+//This is with the function//
+#include <stdio.h>
+
+void checkLeap(int year) {
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        printf("%d IS a leap year.\n", year);
+    } else {
+        printf("%d is NOT a leap year.\n", year);
+    }
+}
+
+int main() {
+    int year;
+    printf("Enter a year: ");
+    scanf("%d", &year);
+    checkLeap(year);
+    return 0;
+}
